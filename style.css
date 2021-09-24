@@ -17,22 +17,24 @@ body{
     background-color: var(--color-azul-claro);
 }
 .main{
+    display: grid;
+    text-align: center;
+    
+    
+}
+.card{
     max-width: 18.75rem;
     margin: 1.875rem;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 15px;
     margin: 6.25rem auto;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-}
-.card{
-    display: grid;
-    text-align: center;
 }
 .card__img--top img{
     width: 100%;
     height: auto;
     border: none;
-    border-radius: 18px 18px 0px 0px;
+    border-radius: 15px 15px 0px 0px;
 }
 .card__text{
     padding: 8px;
@@ -81,6 +83,7 @@ body{
     border-radius: 10px;
     font-weight: 700;
     box-shadow: 4px 22px hsl(225, 100%, 96%);
+    cursor: pointer;
 }
 .card__cancel {
     margin-bottom: 20px;
@@ -88,6 +91,7 @@ body{
 .cancel{
     color: var(--color-zul-dessaturado);
     font-weight: 700;
+    cursor: pointer;
 }
 @media screen and (min-width: 400px) {
     body{
