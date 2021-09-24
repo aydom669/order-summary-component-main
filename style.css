@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
-body {
-    margin: 0px;
-    padding: 0px;
-    font-family: "Red Hat Display";
-    background: var(--color-azul-claro);
-    box-sizing: border-box;
-}
- :root {
+
+:root {
     --color-azul-claro: hsl(225, 100%, 94%);
     --color-brilhante-azul-claro: hsl(245, 75%, 52%);
     --color-azul-muito-claro: hsl(225, 100%, 98%);
@@ -14,112 +8,92 @@ body {
     --color-zul-escuro: hsl(223, 47%, 23%);
     --font-size-paragraph: 16px;
 }
-main{
-    background-color: white;
-    margin: 30px;
-    border: none;
-    border-radius: 10px;
-    max-width: 300px;
-    margin: 100px auto;
-    box-shadow: -3px 5px 38px 5px rgba(0,0,0,0.53); 
-}
 
-.Boxprincipal {
+body{
+    font-family: "Red Hat Display";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--color-azul-claro);
+}
+.main{
+    max-width: 18.75rem;
+    margin: 1.875rem;
+    background-color: white;
+    border-radius: 10px;
+    margin: 6.25rem auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.card{
     display: grid;
     text-align: center;
 }
-
-.Boxprincipal__imagem img {
+.card__img--top img{
     width: 100%;
     height: auto;
-    left: auto;
-    border-radius: 15px 15px 0px 0px;
+    border: none;
+    border-radius: 18px 18px 0px 0px;
 }
-
-.descricao {
+.card__text{
     padding: 8px;
 }
-.descricao__titulo {
+.card__titulo{
     font-weight: 900;
-    font-size: 1.7em;
     color: var(--color-zul-escuro);
+    font-size: 1.7em;
 }
-.descricao__texto {
-    font-size: var(--font-size-paragraph);
+.card__paragrafo{
     color: var(--color-zul-dessaturado);
-    padding: 10px;
+    padding: 6px;
     line-height: 23px;
-
 }
-.planos {
+.card-planos{
     display: grid;
-    grid-gap:30px;
     justify-content: center;
-
+    gap: 30px;
 }
-
-.planos span {
-    color: var(--color-zul-dessaturado);
-    font-weight: 500px;
-}
-
-.planos__conteudo {
+.planos{
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: var(--color-azul-muito-claro);
+    background: var(--color-azul-muito-claro);
     padding: 15px;
+    border: none;
     border-radius: 15px;
-
 }
-
-.anual {
-    color: var(--color-zul-escuro);
+.annual{
+    padding: 0px 20px 0px 10px;
     font-weight: 900;
     line-height: 1.6em;
-    padding: 0px 20px 0px 20px;
 }
-
-.pagamentos {
-    background-color: var(--color-brilhante-azul-claro);
-    color: var(--color-azul-claro);
-    font-weight: 700;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 4px 22px hsl(225, 100%, 95%);
-}
-
-.link a {
-    color: var(--color-brilhante-azul-claro);
-
-}
-
-.cancel {
+.annual span {
     color: var(--color-zul-dessaturado);
+    font-weight: 500;
+}
+.card__pagamento{
+    width: 250px;
+    margin-left: 15px;
+    margin-top: 15px;
     margin-bottom: 17px;
+    background-color: var(--color-brilhante-azul-claro);
+    color: var(--color-azul-muito-claro);
+    padding: 10px;
+    border-radius: 10px;
     font-weight: 700;
-    cursor: pointer;
+    box-shadow: 4px 22px hsl(225, 100%, 96%);
 }
-
-.cancel:hover {
-    color: hsl(245, 75%, 52%);
+.card__cancel {
+    margin-bottom: 20px;
 }
-
-@media screen and (min-width: 600px) {
-    main {
-        max-width: 400px;
-    }
-    body {
+.cancel{
+    color: var(--color-zul-dessaturado);
+    font-weight: 700;
+}
+@media screen and (min-width: 400px) {
+    body{
         background: url(./images/pattern-background-desktop.svg);
         background-repeat: no-repeat;
         background-color: var(--color-azul-claro);
     }
-    .pagamentos:hover {
-        background: var(--color-zul-dessaturado);
-        cursor: pointer;
-    }
-    .link a:hover {
-        cursor: pointer;
-        text-decoration: none;
-    }
+   
 }
